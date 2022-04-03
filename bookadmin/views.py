@@ -70,8 +70,7 @@ def login(request):
   all_entries = list(BookAdmin.objects.filter(name=name))
   for item in all_entries:
     if item.password == password:
-      token = jwt.encode({'employee_id': str(item.id),
-                                        'exp': datetime.utcnow() + timedelta(minutes=24)},
+      token = jwt.encode({'employee_id': str(item.id),'exp': datetime.utcnow() + timedelta(minutes=1440)},
                                        "secrate", algorithm="HS256")
       return HttpResponse(json.dumps({'token':token}),status=200)
   return HttpResponse("error",status = 404) 

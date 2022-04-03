@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookadmin',
     'rest_framework',
+    'bookmanage',
 ]
 
 MIDDLEWARE = [
