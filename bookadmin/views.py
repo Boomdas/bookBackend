@@ -15,6 +15,8 @@ from datetime import datetime, timedelta
 @api_view(['GET'])
 def getData(request):
   all_entries = list(BookAdmin.objects.all())
+  header = request.headers['user']
+  print(header)
   data = []
   for item in all_entries:
     data.append({
@@ -57,6 +59,7 @@ def updatedata(request):
 @api_view(['DELETE'])
 def deletedata(request):
   id = request.query_params.get('id')
+  
   BookAdmin.objects.filter(id=id).delete()
   return HttpResponse("ok")
 
