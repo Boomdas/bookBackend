@@ -1,0 +1,93 @@
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git stash
+Saved working directory and index state WIP on main: e9ff81a ok
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git pull origin main
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 6 (delta 5), reused 6 (delta 5), pack-reused 0
+Unpacking objects: 100% (6/6), 1.16 KiB | 5.00 KiB/s, done.
+From https://github.com/Boomdas/bookBackend
+ * branch            main       -> FETCH_HEAD
+   e9ff81a..b059eb0  main       -> origin/main
+Updating e9ff81a..b059eb0
+Fast-forward
+ bookadmin/__pycache__/views.cpython-39.pyc | Bin 2649 -> 2699 bytes
+ bookadmin/views.py                         |   3 +++
+ 2 files changed, 3 insertions(+)
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git stash apply
+Auto-merging bookadmin/views.py
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   book/__pycache__/settings.cpython-38.pyc
+        modified:   book/__pycache__/urls.cpython-38.pyc
+        modified:   book/settings.py
+        modified:   bookadmin/__pycache__/models.cpython-38.pyc
+        modified:   bookadmin/__pycache__/urls.cpython-38.pyc
+        modified:   bookadmin/__pycache__/views.cpython-38.pyc
+        modified:   bookadmin/models.py
+        modified:   bookadmin/views.py
+        modified:   bookmanage/models.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bookadmin/__pycache__/serializer.cpython-38.pyc
+        bookmanage/__pycache__/
+        bookmanage/migrations/0001_initial.py
+        bookmanage/migrations/__pycache__/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git add .
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git commit -m "ok"
+[main 94d7ec4] ok
+ 17 files changed, 102 insertions(+), 4 deletions(-)
+ rewrite book/__pycache__/settings.cpython-38.pyc (62%)
+ rewrite bookadmin/__pycache__/models.cpython-38.pyc (86%)
+ create mode 100644 bookadmin/__pycache__/serializer.cpython-38.pyc
+ rewrite bookadmin/__pycache__/urls.cpython-38.pyc (98%)
+ rewrite bookadmin/__pycache__/views.cpython-38.pyc (99%)
+ create mode 100644 bookmanage/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 bookmanage/__pycache__/admin.cpython-38.pyc
+ create mode 100644 bookmanage/__pycache__/apps.cpython-38.pyc
+ create mode 100644 bookmanage/__pycache__/models.cpython-38.pyc
+ create mode 100644 bookmanage/migrations/0001_initial.py
+ create mode 100644 bookmanage/migrations/__pycache__/0001_initial.cpython-38.pyc
+ create mode 100644 bookmanage/migrations/__pycache__/__init__.cpython-38.pyc
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git push origin main
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (27/27), 8.20 KiB | 2.05 MiB/s, done.
+Total 27 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To https://github.com/Boomdas/bookBackend.git
+   b059eb0..94d7ec4  main -> main
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Rohit@ROHIT-PC MINGW64 /f/d_jango/book (main)
+$
